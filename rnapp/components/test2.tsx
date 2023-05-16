@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native';
 
 
-const Test = () => {
+const Test2 = () => {
     return (
         <View style={styles.container}>
-            <Text>Test!</Text>
+            <Text>Test2!</Text>
         </View>
     )
 }
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default Test
+export default Test2
