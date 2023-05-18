@@ -2,9 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import { lazy, Suspense } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { QueryClient, QueryClientProvider } from "react-query";
-import Test2 from './components/test2';
+import Test2 from './src/components/test2';
+import Navigation from './src/navigations';
 const queryClient = new QueryClient();
-const Test = lazy(() => import('./components/test'));
+const Test = lazy(() => import('./src/components/test'));
 
 export default function App() {
 
@@ -14,7 +15,8 @@ export default function App() {
         <Text>Open up App.tsx to staaart working on your app!</Text>
         <StatusBar style="auto" />
         {/* <Suspense fallback={<Test2 />} > */}
-        <Test />
+        {/* <Test /> */}
+        <Navigation />
         {/* </Suspense> */}
       </View>
     </QueryClientProvider>
