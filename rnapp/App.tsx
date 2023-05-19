@@ -14,10 +14,10 @@ export default function App() {
       <View style={styles.container}>
         <Text>Open up App.tsx to staaart working on your app!</Text>
         <StatusBar style="auto" />
-        {/* <Suspense fallback={<Test2 />} > */}
+        <Suspense fallback={<Test2 />} >
         {/* <Test /> */}
         <Navigation />
-        {/* </Suspense> */}
+        </Suspense>
       </View>
     </QueryClientProvider>
   );
