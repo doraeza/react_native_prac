@@ -2,17 +2,14 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Test from '../components/test';
 
-class FriendsScreen extends React.Component {
-  render() {
+const Main = () => {
     return (
       <View style={styles.container}>
-        <Text>Add friends here!</Text>
-        <Text>Open up App.tsx to staaart working on your app!</Text>
+        <Text>Main Screen!</Text>
         
         <Test />
       </View>
     );
-  }
 }
 
 const styles = StyleSheet.create({
@@ -23,4 +20,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default FriendsScreen;
+export default Main
