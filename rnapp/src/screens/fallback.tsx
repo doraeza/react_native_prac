@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native';
 
 
-const Test2 = () => {
+const Fallback = () => {
     return (
         <View style={styles.container}>
-            <Text>Test2!</Text>
+            <Text>Failed render</Text>
         </View>
     )
 }
@@ -17,4 +17,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default Test2
+export default Fallback
