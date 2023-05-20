@@ -5,7 +5,7 @@ import FriendsScreen from '../screens/FriendsScreen';
 import Main from '../screens/Main';
 import List from '../screens/list';
 
-const Stack = createStackNavigator();
+const RootStack = createStackNavigator();
 
 const MainStack = () => {
 //   const theme = useContext(ThemeContext);
@@ -13,17 +13,17 @@ const MainStack = () => {
 // console.log(ApiData1)
   return (
     
-    <Stack.Navigator
-      initialRouteName="Main"
+    <RootStack.Navigator
+    //   initialRouteName="Main"
       screenOptions={{
         headerTitleAlign: 'center',
         headerBackTitleVisible: false,
       }}
     >
-      <Stack.Screen name="Main" component={Main} />
-      <Stack.Screen name="List" component={List}/>
-      <Stack.Screen name="FriendsScreen" component={FriendsScreen} />
-    </Stack.Navigator>
+      <RootStack.Screen name="Main" component={Main} />
+      <RootStack.Screen name="List" component={List}/>
+      <RootStack.Screen name="FriendsScreen" component={FriendsScreen} />
+    </RootStack.Navigator>
   );
 };
 
