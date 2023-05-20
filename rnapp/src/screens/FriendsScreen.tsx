@@ -2,8 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Test from '../components/test';
 
-class FriendsScreen extends React.Component {
-  render() {
+const FriendsScreen =()=> {
     return (
       <View style={styles.container}>
         <Text>Add friends here!</Text>
@@ -12,7 +11,6 @@ class FriendsScreen extends React.Component {
         <Test />
       </View>
     );
-  }
 }
 
 const styles = StyleSheet.create({

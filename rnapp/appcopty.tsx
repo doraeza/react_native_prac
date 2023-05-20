@@ -8,17 +8,20 @@ const queryClient = new QueryClient();
 const Test = lazy(() => import('./src/components/test'));
 import { NavigationContainer } from '@react-navigation/native';
 import MainStack from './src/navigations/MainStack';
-import { createStackNavigator } from '@react-navigation/stack';
 
 export default function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Suspense fallback={<Fallback />} >
-        <NavigationContainer>
-            <MainStack />
-        </NavigationContainer>
-      </Suspense>
+      <View style={styles.container}>
+        <Text>Open up App.tsx to staaart working on your app!</Text>
+        <Text>Open up App.tsx to staaart working on your app!</Text>
+        <StatusBar style="auto" />
+        <Suspense fallback={<Fallback />} >
+        {/* <Test /> */}
+        <Navigation />
+        </Suspense>
+      </View>
     </QueryClientProvider>
   );
 }
