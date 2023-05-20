@@ -46,3 +46,9 @@ export interface userInteface  {
         thumbnail: string
     }
 }
+
+export interface RootStackParamList  {
+    Main: undefined;
+    List: undefined;
+    FriendsScreen: undefined;
+  };
