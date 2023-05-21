@@ -11,7 +11,9 @@ const Main = () => {
       <View style={styles.container}>
         <Text>Main Screen!</Text>
         <Button title='go to the FriendsScreen' 
-        onPress={()=>{navigation.push('FriendsScreen')}}/>
+        onPress={()=>{navigation.navigate('FriendsScreen')}}/>
+        <Button title='go to the List' 
+        onPress={()=>{navigation.navigate('List')}}/>
         <Test />
       </View>
     );
