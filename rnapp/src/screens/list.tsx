@@ -8,15 +8,16 @@ import { userInteface } from '../interface/ApiListData';
 
 
 
-const List = () => {
-
+const List = ({ ApiData1,ApiData2,ApiData3 }:
+    { ApiData1:userInteface,ApiData2:userInteface,ApiData3:userInteface }) => 
+    {
     const items = [
-        // { _id: 1, name: ApiData1.name.last },
-        // { _id: 2, name: ApiData2.name.last },
-        // { _id: 3, name: ApiData3.name.last },
-        { _id: 1, name: "ApiData1.name.last" },
-        { _id: 2, name: "ApiData2.name.last" },
-        { _id: 3, name: "ApiData3.name.last" },
+        { _id: 1, name: ApiData1.name.last },
+        { _id: 2, name: ApiData2.name.last },
+        { _id: 3, name: ApiData3.name.last },
+        // { _id: 1, name: "ApiData1.name.last" },
+        // { _id: 2, name: "ApiData2.name.last" },
+        // { _id: 3, name: "ApiData3.name.last" },
     ];
     
 
