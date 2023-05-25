@@ -1,6 +1,6 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Test from '../components/test';
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
+import Test from '../components/test'
 
 const FriendsScreen =()=> {
     return (
@@ -21,4 +21,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default FriendsScreen;
+export default FriendsScreen
