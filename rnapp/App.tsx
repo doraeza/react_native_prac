@@ -9,6 +9,7 @@ import MainStack from './src/navigations/MainStack';
 import {Provider as ReduxProvider}  from 'react-redux';
 import appReducer from './src/store/reducers';
 import { configureStore } from '@reduxjs/toolkit';
+import MainStackBottomStyle from './src/navigations/MainStackBottomStyle';
 
 export default function App() {
   const store = configureStore({
@@ -20,22 +21,11 @@ export default function App() {
       <QueryClientProvider client={queryClient}>
         <Suspense fallback={<Fallback />} >
           <NavigationContainer>
-              <MainStack />
+              <MainStackBottomStyle />
+              {/* <MainStack /> */}
           </NavigationContainer>
         </Suspense>
       </QueryClientProvider>
     </ReduxProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-// import App from './src/App';
-
-// export default App;
