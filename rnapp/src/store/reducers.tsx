@@ -1,6 +1,4 @@
-interface AppState {
-    count: number;
-  }
+import {AppState} from './../interface/AppState'
   
   const initialState: AppState = {
     count: 0,

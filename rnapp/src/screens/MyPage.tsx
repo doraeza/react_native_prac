@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import Test from '../components/test'
 
-const FriendsScreen =()=> {
+const MyPage =()=> {
     return (
       <View style={styles.container}>
         <Text>Add friends here!</Text>
@@ -22,4 +22,5 @@ const styles = StyleSheet.create({
 
   },
 });
-export default FriendsScreen
+
+export default MyPage
