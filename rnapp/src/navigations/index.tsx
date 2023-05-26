@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import MainStack from './MainStack'
 import * as SplashScreen from 'expo-splash-screen'
+import MainStackBottomStyle from './MainStackBottomStyle';
 
 function sleep (ms:number) {
     return new Promise(
@@ -21,7 +22,8 @@ const Navigation = () => {
     //   }, [])
       
   return (
-     <MainStack />
+    //  <MainStack />
+     <MainStackBottomStyle />
   );
 };
 
