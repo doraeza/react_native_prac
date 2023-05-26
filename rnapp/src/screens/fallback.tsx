@@ -10,11 +10,13 @@ const Fallback = () => {
 }
 
 const styles = StyleSheet.create({
-    container: {
-      backgroundColor: 'grey',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-  });
+  container: {
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100%'
+
+  },
+});
 
 export default Fallback

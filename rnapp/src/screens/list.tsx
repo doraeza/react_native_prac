@@ -4,7 +4,15 @@ import { userInteface } from '../interface/ApiListData'
 // import styled from 'styled-components/native'
 
 
+const styles = StyleSheet.create({
+    container: {
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '100%'
 
+    },
+  });
 
 const List = ({ ApiData1,ApiData2,ApiData3 }:
     { ApiData1:userInteface,ApiData2:userInteface,ApiData3:userInteface }) => 
@@ -20,7 +28,7 @@ const List = ({ ApiData1,ApiData2,ApiData3 }:
     }
 
     return (
-        <View>
+        <View style={styles.container}>
             {items.map((item,idx:number) => (
                 <Button
                     key = {idx}

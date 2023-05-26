@@ -10,10 +10,10 @@ const Main = () => {
     return (
       <View style={styles.container}>
         <Text>Main Screen!</Text>
-        <Button title='go to the FriendsScreen' 
+        {/* <Button title='go to the FriendsScreen' 
         onPress={()=>{navigation.navigate('FriendsScreen')}}/>
         <Button title='go to the List' 
-        onPress={()=>{navigation.navigate('List')}}/>
+        onPress={()=>{navigation.navigate('List')}}/> */}
         <Test />
       </View>
     );

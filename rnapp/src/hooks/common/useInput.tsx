@@ -1,12 +1,17 @@
 import React from "react"
-
-const useInput = () => {
+import { NativeEvent } from "react-native-reanimated/lib/types/lib/reanimated2/commonTypes"
+import ReactNative, { NativeSyntheticEvent, TextInputChangeEventData } from "react-native"
+const useInput = (el:string) => {
     const [value, setValue] = React.useState<string>("")
     // const [length, setLength] = React.useState<number>(0)
 
-    const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setValue(e.target.value)
-        // setLength(e.target.value.length)
+    // const onChangeText = (e: NativeSyntheticEvent<TextInputChangeEventData>) => {
+    //     const {text} = e.nativeEvent
+    //     setValue(text);
+    //   };
+    const onChangeText = (text:string) => {
+        setValue(text)
+        console.log(text)
     }
 
     const clear = () => {
@@ -18,7 +23,7 @@ const useInput = () => {
         clear,
         props: {
             value,
-            onChange,
+            onChangeText,
             // length,
         },
     }

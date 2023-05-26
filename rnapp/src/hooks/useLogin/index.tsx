@@ -4,8 +4,8 @@ import useInput from "../common/useInput"
 
 function useLogin() {
 
-    const inputId = useInput()
-    const inputPwd = useInput()
+    const inputEmail = useInput("")
+    const inputPwd = useInput("")
 
     
     // const apiCreate = async (answerData: AnswerValue) => {
@@ -23,7 +23,7 @@ function useLogin() {
         //     mutate(`http://localhost:8080/scenario/list`)
         // })
     }
-    return { inputId, inputPwd, login }
+    return { inputEmail, inputPwd, login }
 }
 
 export default useLogin
