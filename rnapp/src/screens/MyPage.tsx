@@ -5,8 +5,8 @@ import Test from '../components/test'
 const MyPage =()=> {
     return (
       <View style={styles.container}>
-        <Text>Add friends here!</Text>
-        <Text>Open up App.tsx to staaart working on your app!</Text>
+        <Text>Profile</Text>
+        <Text>MyGrade</Text>
         
         <Test />
       </View>
