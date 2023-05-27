@@ -10,6 +10,7 @@ const Login = () => {
 
     const onLoginPress = () => {
         // Alert.alert('Credentials', `${email} + ${password}`);
+        login() // todo
     }
     const onSignUpPress = () => {
       // Alert.alert('SignUp Credentials', `${email} + ${password}`);
