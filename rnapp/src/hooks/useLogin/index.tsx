@@ -18,7 +18,7 @@ function useLogin() {
     //         message.error("에러가 발생했습니다. 관리자에게 문의해주세요.")
     //     }
     // }
-    const login = (e?: NativeMouseEvent) => {
+    const login = () => {
         console.log("api create")
         // axios.post("http://localhost:8080/scenario/post", {}).then((res) => {
         //     console.log(res)
