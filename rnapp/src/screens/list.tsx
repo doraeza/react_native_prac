@@ -1,31 +1,38 @@
 import React from 'react'
-import { Button, StyleSheet, Text, View } from 'react-native'
+import { Button, FlatList, StyleSheet, Text, View } from 'react-native'
 import { userInteface } from '../interface/ApiListData'
 // import styled from 'styled-components/native'
 import {ScreenStyles} from '../Styles/Screen/ChatScreenStyles'
+import { ProductData } from '../interface/ProductData';
+import ProductCard from '../components/product/ProductCard';
 
-const List = ({ ApiData1,ApiData2,ApiData3 }:
-    { ApiData1:userInteface,ApiData2:userInteface,ApiData3:userInteface }) => 
+const List = ({ productData }:
+    { productData:ProductData[] }) => 
     {
-    const items = [
-        {name: ApiData1.name.last },
-        {name: ApiData2.name.last },
-        {name: ApiData3.name.last },
-    ]
+    // const items = [
+    //     {name: ApiData1.name.last },
+    //     {name: ApiData2.name.last },
+    //     {name: ApiData3.name.last },
+    // ]
     
-
+    const renderProductItem = ({ item }:{ item:ProductData }) => {
+        return (
+          <ProductCard
+            product={item}
+            // onPress={() => navigation.navigate('ProductDetails', { productId: item.id })}
+          />
+        );
+    }
     const _onPress = (item:{name: string}) => {
     }
 
     return (
         <View style={ScreenStyles.container}>
-            {items.map((item,idx:number) => (
-                <Button
-                    key = {idx}
-                    title = {item.name}
-                    onPress = {() => _onPress(item)}
-                />
-            ))}
+            <FlatList
+                data={productData}
+                renderItem={renderProductItem}
+                contentContainerStyle={ScreenStyles.productList}
+            />
         </View>
     )
 };

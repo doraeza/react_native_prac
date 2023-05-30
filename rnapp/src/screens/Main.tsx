@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
-import Test from '../components/test';
+import Test from '../components/common/TestModule';
 import { useNavigation } from '@react-navigation/core';
 import {ScreenStyles} from '../Styles/Screen/ChatScreenStyles'
 

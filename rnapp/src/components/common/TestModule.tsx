@@ -1,8 +1,8 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
-import useUserInfo from '../hooks/useUserInfo';
+import useUserInfo from '../../hooks/useUserInfo';
 import { useDispatch, useSelector } from 'react-redux';
-import { AppState } from '../interface/AppState';
-import { decrement, increment } from '../store/action';
+import { AppState } from '../../interface/AppState';
+import { decrement, increment } from '../../store/action';
 
 
 const Test = () => {
