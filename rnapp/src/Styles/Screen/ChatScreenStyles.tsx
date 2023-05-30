@@ -22,4 +22,16 @@ export const ScreenStyles = StyleSheet.create({
   list: {
     height: '80%',
   },
+  button: {
+    backgroundColor: '#007AFF',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 5,
+  },
+  buttonText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
 });
