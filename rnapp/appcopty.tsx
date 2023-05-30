@@ -7,7 +7,7 @@ import Navigation from './src/navigations';
 const queryClient = new QueryClient();
 const Test = lazy(() => import('./src/components/test'));
 import { NavigationContainer } from '@react-navigation/native';
-import MainStack from './src/navigations/MainStack';
+import MainStack from './src/navigations/MainStack(not used)';
 
 export default function App() {
 

@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import Fallback from './src/screens/fallback';
 const queryClient = new QueryClient();
 import { NavigationContainer } from '@react-navigation/native';
-import MainStack from './src/navigations/MainStack';
+import MainStack from './src/navigations/MainStack(not used)';
 import {Provider as ReduxProvider}  from 'react-redux';
 import appReducer from './src/store/reducers';
 import { configureStore } from '@reduxjs/toolkit';
