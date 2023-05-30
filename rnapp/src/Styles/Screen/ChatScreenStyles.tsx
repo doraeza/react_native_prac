@@ -29,11 +29,25 @@ export const ScreenStyles = StyleSheet.create({
     borderRadius: 5,
     marginTop: 5
   },
+  image: {
+    width: 120,
+    height: 120,
+    marginBottom: 8,
+    resizeMode: 'cover',
+  },
   buttonText: {
     color: '#FFFFFF',
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
   },
-
+  productList: {
+    paddingHorizontal: 8,
+  },
+  productContainer: {
+    flex: 1,
+    backgroundColor: '#F5F5F5',
+    paddingHorizontal: 16,
+    paddingTop: 32,
+  },
 });

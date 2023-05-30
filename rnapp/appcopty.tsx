@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import Fallback from './src/screens/fallback';
 import Navigation from './src/navigations';
 const queryClient = new QueryClient();
-const Test = lazy(() => import('./src/components/test'));
+const Test = lazy(() => import('./src/components/common/TestModule'));
 import { NavigationContainer } from '@react-navigation/native';
 import MainStack from './src/navigations/MainStack(not used)';
 

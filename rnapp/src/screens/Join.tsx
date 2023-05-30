@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import {ScreenStyles} from '../Styles/Screen/ChatScreenStyles'
-import CustomButton from '../components/button';
+import CustomButton from '../components/common/CustomButton';
 
 const Join = () => {
   const [email, setEmail] = useState('');

@@ -5,7 +5,7 @@ import useLogin from '../hooks/useLogin';
 import {ScreenStyles} from '../Styles/Screen/ChatScreenStyles'
 import { useNavigation } from '@react-navigation/core';
 import Join from './Join';
-import CustomButton from '../components/button';
+import CustomButton from '../components/common/CustomButton';
 
 const Login = () => {
     let { inputEmail, inputPwd, login } = useLogin()

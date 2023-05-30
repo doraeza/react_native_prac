@@ -26,7 +26,7 @@ const { isLoading, error, ApiData1,ApiData2, ApiData3 } = useUserInfo()
       }}
     >
       <RootStack.Screen name="Main" component={Main} />
-      <RootStack.Screen name="List" children={()=><List ApiData1={ApiData1} ApiData2={ApiData2} ApiData3={ApiData3} />} />
+      {/* <RootStack.Screen name="List" children={()=><List ApiData1={ApiData1} ApiData2={ApiData2} ApiData3={ApiData3} />} /> */}
       <RootStack.Screen name="FriendsScreen" component={FriendsScreen} />
       <RootStack.Screen name="Join" component={Join} />
       <RootStack.Screen name="Login" component={Login} />
