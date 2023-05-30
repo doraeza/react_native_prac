@@ -2,30 +2,31 @@ import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet, Alert } from 'react-native';
 import useInput from '../hooks/common/useInput';
 import useLogin from '../hooks/useLogin';
+import {ScreenStyles} from '../Styles/Screen/ChatScreenStyles'
+import { useNavigation } from '@react-navigation/core';
+import Join from './Join';
 
 const Login = () => {
     // const [email, setEmail] = useState('');
     // const [password, setPassword] = useState('');
     let { inputEmail, inputPwd, login } = useLogin()
-
+    let navigation:any = useNavigation()
     const onLoginPress = () => {
         // Alert.alert('Credentials', `${email} + ${password}`);
         login() // todo
     }
-    const onSignUpPress = () => {
-      // Alert.alert('SignUp Credentials', `${email} + ${password}`);
-  }
+    
     return (
-        <View style={styles.container}>
+        <View style={ScreenStyles.container}>
             <TextInput
                 placeholder={'이메일'}
-                style={styles.input}
+                style={ScreenStyles.input}
                 {...inputEmail.props}
             />
             <TextInput
                 placeholder={'비밀번호'}
                 secureTextEntry={true}
-                style={styles.input}
+                style={ScreenStyles.input}
                 {...inputPwd.props}
             />
             <Button
@@ -34,28 +35,12 @@ const Login = () => {
             />
             <Button
                 title={'회원가입'}
-                onPress={onSignUpPress}
+                onPress={()=>{navigation.navigate('Join')}}
             />
         </View>
     );
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    input: {
-        height: 40,
-        width: '80%',
-        borderColor: 'gray',
-        borderWidth: 1,
-        marginTop: 20,
-    },
-    button: {
-      marginTop: 10,
-    },
-});
+
 
 export default Login

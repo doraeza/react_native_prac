@@ -1,22 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
+import {ScreenStyles} from '../Styles/Screen/ChatScreenStyles'
 
 
 const Fallback = () => {
     return (
-        <View style={styles.container}>
+        <View style={ScreenStyles.container}>
             <Text>Failed render</Text>
         </View>
     )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100%'
 
-  },
-});
 
 export default Fallback

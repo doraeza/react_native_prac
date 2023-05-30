@@ -8,9 +8,11 @@ import useUserInfo from '../hooks/useUserInfo';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Login from '../screens/Login';
 import MyPage from '../screens/MyPage';
+import { createStackNavigator } from '@react-navigation/stack';
+import Join from '../screens/Join';
 
 const BottomTab = createBottomTabNavigator();
-
+const RootStack = createStackNavigator();
 const MainStackBottomStyle = () => {
 //   const theme = useContext(ThemeContext);
 const { isLoading, error, ApiData1,ApiData2, ApiData3 } = useUserInfo()
@@ -20,10 +22,22 @@ const [isLogin, setIsLogin] = React.useState(false)
     
     <BottomTab.Navigator
     //   initialRouteName="Main"
-      screenOptions={{
-        headerTitleAlign: 'center',
-      }}
+    screenOptions={({ route }) => ({
+      tabBarVisible: route.name === 'Main' ,
+      headerTitleAlign: 'center',
+    })}
     >
+      <BottomTab.Screen
+        name="Join"
+        component={Join}
+        options={{ tabBarButton: () => null }}
+      />
+      <BottomTab.Screen
+        name="Login"
+        component={Login}
+        options={{ tabBarButton: () => null }}
+      />
+      
       <BottomTab.Screen name="Main" component={Main} />
       <BottomTab.Screen name="List" children={()=><List ApiData1={ApiData1} ApiData2={ApiData2} ApiData3={ApiData3} />} />
       <BottomTab.Screen name="FriendsScreen" component={FriendsScreen} />
