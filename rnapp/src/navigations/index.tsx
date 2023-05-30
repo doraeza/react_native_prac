@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import MainStack from './MainStack'
+import MainStack from './MainStack(not used)'
 import * as SplashScreen from 'expo-splash-screen'
 import MainStackBottomStyle from './MainStackBottomStyle';
 

@@ -12,7 +12,7 @@ export const ScreenStyles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'black',
     padding: 10,
-    marginRight: 30,
+    marginBottom: 12,
   },
   bottomContainer: {
     marginHorizontal: 10,
@@ -27,6 +27,7 @@ export const ScreenStyles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 5,
+    marginTop: 5
   },
   buttonText: {
     color: '#FFFFFF',
@@ -34,4 +35,5 @@ export const ScreenStyles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
+
 });

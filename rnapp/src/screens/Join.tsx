@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
+import {ScreenStyles} from '../Styles/Screen/ChatScreenStyles'
+import CustomButton from '../components/button';
 
 const Join = () => {
   const [email, setEmail] = useState('');
@@ -16,40 +18,42 @@ const Join = () => {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={ScreenStyles.container}>
       <TextInput
-        style={styles.input}
-        placeholder="Email"
+        style={ScreenStyles.input}
+        placeholder="이메일"
         value={email}
         onChangeText={setEmail}
       />
       <TextInput
-        style={styles.input}
-        placeholder="Password"
+        style={ScreenStyles.input}
+        placeholder="이름"
         value={password}
         onChangeText={setPassword}
         secureTextEntry
       />
-      <Button title="Sign up" onPress={handleSignup} />
+      <TextInput
+        style={ScreenStyles.input}
+        placeholder="비밀번호"
+        value={password}
+        onChangeText={setPassword}
+        secureTextEntry
+      />
+
+      <CustomButton
+            text='가입'
+            pressFuction={()=>{handleSignup}}
+      />
+      <CustomButton
+            text='취소'
+            pressFuction={()=>{navigation.navigate('Login')}}
+      />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 16,
-  },
-  input: {
-    width: '100%',
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
-    marginBottom: 12,
-    paddingLeft: 8,
-  },
+  
 });
 
 export default Join;
