@@ -5,6 +5,8 @@ import FriendsScreen from '../screens/FriendsScreen';
 import Main from '../screens/Main';
 import List from '../screens/list';
 import useUserInfo from '../hooks/useUserInfo';
+import Join from '../screens/Join';
+import Login from '../screens/Login';
 
 const RootStack = createStackNavigator();
 
@@ -24,6 +26,8 @@ const { isLoading, error, ApiData1,ApiData2, ApiData3 } = useUserInfo()
       <RootStack.Screen name="Main" component={Main} />
       <RootStack.Screen name="List" children={()=><List ApiData1={ApiData1} ApiData2={ApiData2} ApiData3={ApiData3} />} />
       <RootStack.Screen name="FriendsScreen" component={FriendsScreen} />
+      <RootStack.Screen name="Join" component={Join} />
+      <RootStack.Screen name="Login" component={Login} />
     </RootStack.Navigator>
   );
 };

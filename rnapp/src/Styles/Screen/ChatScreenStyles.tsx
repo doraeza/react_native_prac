@@ -2,9 +2,10 @@ import {StyleSheet} from 'react-native';
 
 export const ScreenStyles = StyleSheet.create({
   container: {
-    flex: 1,
-    paddingTop: 30,
-    padding: 8,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100%'
   },
   input: {
     width: '70%',

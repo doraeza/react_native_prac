@@ -2,17 +2,7 @@ import React from 'react'
 import { Button, StyleSheet, Text, View } from 'react-native'
 import { userInteface } from '../interface/ApiListData'
 // import styled from 'styled-components/native'
-
-
-const styles = StyleSheet.create({
-    container: {
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
-      height: '100%'
-
-    },
-  });
+import {ScreenStyles} from '../Styles/Screen/ChatScreenStyles'
 
 const List = ({ ApiData1,ApiData2,ApiData3 }:
     { ApiData1:userInteface,ApiData2:userInteface,ApiData3:userInteface }) => 
@@ -28,7 +18,7 @@ const List = ({ ApiData1,ApiData2,ApiData3 }:
     }
 
     return (
-        <View style={styles.container}>
+        <View style={ScreenStyles.container}>
             {items.map((item,idx:number) => (
                 <Button
                     key = {idx}
