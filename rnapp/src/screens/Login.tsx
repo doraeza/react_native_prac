@@ -5,10 +5,9 @@ import useLogin from '../hooks/useLogin';
 import {ScreenStyles} from '../Styles/Screen/ChatScreenStyles'
 import { useNavigation } from '@react-navigation/core';
 import Join from './Join';
+import CustomButton from '../components/button';
 
 const Login = () => {
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
     let { inputEmail, inputPwd, login } = useLogin()
     let navigation:any = useNavigation()
     const onLoginPress = () => {
@@ -29,14 +28,15 @@ const Login = () => {
                 style={ScreenStyles.input}
                 {...inputPwd.props}
             />
-            <Button
-                title={'로그인'}
-                onPress={onLoginPress}
+            <CustomButton
+                text='로그인'
+                pressFuction={()=>{onLoginPress}}
             />
-            <Button
-                title={'회원가입'}
-                onPress={()=>{navigation.navigate('Join')}}
+            <CustomButton
+                text='회원가입'
+                pressFuction={()=>{navigation.navigate('Join')}}
             />
+            
         </View>
     );
 }
