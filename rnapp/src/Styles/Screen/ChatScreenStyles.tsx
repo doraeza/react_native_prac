@@ -35,6 +35,12 @@ export const ScreenStyles = StyleSheet.create({
     marginBottom: 8,
     resizeMode: 'cover',
   },
+  detailImage: {
+    width: 200,
+    height: 200,
+    marginBottom: 8,
+    resizeMode: 'cover',
+  },
   buttonText: {
     color: '#FFFFFF',
     fontSize: 16,
@@ -50,4 +56,11 @@ export const ScreenStyles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 32,
   },
+  description: {
+    flexWrap: 'wrap',
+        flexDirection: 'row',
+        // not
+        borderWidth: 1,
+        marginTop: 30,
+  }
 });
