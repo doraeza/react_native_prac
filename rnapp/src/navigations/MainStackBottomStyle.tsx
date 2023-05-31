@@ -11,9 +11,20 @@ import MyPage from '../screens/MyPage';
 import { createStackNavigator } from '@react-navigation/stack';
 import Join from '../screens/Join';
 import useProductList from '../hooks/useProductlist/Index';
+import ProductDetail from '../screens/ProductDetail';
+import { ProductData } from '../interface/ProductData';
 
-const BottomTab = createBottomTabNavigator();
-const RootStack = createStackNavigator();
+const BottomTab = createBottomTabNavigator<MainStackParamList>();
+type MainStackParamList = {
+  Main: undefined;
+  List: undefined;
+  FriendsScreen: undefined;
+  Join: undefined;
+  Login: undefined;
+  ProductDetail: { product: ProductData };
+  MyPage: undefined;
+};
+
 const MainStackBottomStyle = () => {
 //   const theme = useContext(ThemeContext);
 const { isLoading, error, ApiData1,ApiData2, ApiData3 } = useUserInfo()
@@ -34,16 +45,19 @@ const [isLogin, setIsLogin] = React.useState(false)
         component={Join}
         options={{ tabBarButton: () => null }}
       />
+
       <BottomTab.Screen
-        name="Login"
-        component={Login}
-        options={{ tabBarButton: () => null }}
+        name="ProductDetail"
+        component={ProductDetail}
+        options={
+          { tabBarButton: () => null }
+        }
       />
       
       <BottomTab.Screen name="Main" component={Main} />
       <BottomTab.Screen name="List" children={()=><List productData={productData} />} />
       <BottomTab.Screen name="FriendsScreen" component={FriendsScreen} />
-      {isLogin ? <BottomTab.Screen name="MyPage" component={MyPage} /> : <BottomTab.Screen name="Login/Join" component={Login} />}
+      {isLogin ? <BottomTab.Screen name="MyPage" component={MyPage} /> : <BottomTab.Screen name="Login" component={Login} />}
     </BottomTab.Navigator>
   );
 };
