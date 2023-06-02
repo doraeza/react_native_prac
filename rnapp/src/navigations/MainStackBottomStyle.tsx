@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 // import { ThemeContext } from 'styled-components/native';
 // import { createStackNavigator } from '@react-navigation/stack';
-import FriendsScreen from '../screens/FriendsScreen';
+import Cart from '../screens/FriendsScreen';
 import Main from '../screens/Main';
 import List from '../screens/list';
 import useUserInfo from '../hooks/useUserInfo';
@@ -18,7 +18,7 @@ const BottomTab = createBottomTabNavigator<MainStackParamList>();
 type MainStackParamList = {
   Main: undefined;
   List: undefined;
-  FriendsScreen: undefined;
+  Cart: undefined;
   Join: undefined;
   Login: undefined;
   ProductDetail: { product: ProductData };
@@ -56,7 +56,7 @@ const [isLogin, setIsLogin] = React.useState(false)
       
       <BottomTab.Screen name="Main" component={Main} />
       <BottomTab.Screen name="List" children={()=><List productData={productData} />} />
-      <BottomTab.Screen name="FriendsScreen" component={FriendsScreen} />
+      <BottomTab.Screen name="Cart" component={Cart} />
       {isLogin ? <BottomTab.Screen name="MyPage" component={MyPage} /> : <BottomTab.Screen name="Login" component={Login} />}
     </BottomTab.Navigator>
   );

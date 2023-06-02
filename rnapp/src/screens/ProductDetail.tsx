@@ -27,10 +27,7 @@ const ProductDetail = () => {
                 <Text>Price:$ {product.price}</Text>
                 <View style={{ height: 10 }} />
                 <AddToCart />
-                <CustomButton
-                        text='장바구니 담기'
-                        pressFuction={()=>{}}
-                />
+                
                 <CustomButton
                         text='바로 구매'
                         pressFuction={()=>{}}

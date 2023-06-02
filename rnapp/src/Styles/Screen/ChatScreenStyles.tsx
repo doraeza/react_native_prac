@@ -65,6 +65,7 @@ export const ScreenStyles = StyleSheet.create({
   },
   plusminus: {
     display: 'flex',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: 'center',
   }
 });
