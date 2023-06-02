@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, Button } from 'react-native';
+import CustomButton from '../common/CustomButton';
+import { ScreenStyles } from '../../Styles/Screen/ChatScreenStyles';
 
 const AddToCart = () => {
   const [count, setCount] = useState(1);
@@ -16,9 +18,15 @@ const AddToCart = () => {
 
   return (
     <View>
-      <Text>장바구니에 추가할 갯수: {count}</Text>
-      <Button title="+" onPress={incrementCount} />
-      <Button title="-" onPress={decrementCount} />
+      <View style={ScreenStyles.plusminus}>
+        <Text>갯수: {count}</Text>
+        <Button title="+" onPress={incrementCount} />
+        <Button title="-" onPress={decrementCount} />
+      </View>
+      <CustomButton
+              text='장바구니 담기'
+              pressFuction={()=>{}}
+      />
     </View>
   );
 };
