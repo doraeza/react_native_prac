@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import Test from '../components/common/TestModule'
 import {ScreenStyles} from '../Styles/Screen/ChatScreenStyles'
 
-const FriendsScreen =()=> {
+const CartScreen =()=> {
     return (
       <View style={ScreenStyles.container}>
         <Text>Add friends here!</Text>
@@ -15,4 +15,4 @@ const FriendsScreen =()=> {
 }
 
 
-export default FriendsScreen
+export default CartScreen
