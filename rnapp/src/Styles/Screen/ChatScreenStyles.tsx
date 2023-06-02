@@ -62,5 +62,9 @@ export const ScreenStyles = StyleSheet.create({
         // not
         borderWidth: 1,
         marginTop: 30,
+  },
+  plusminus: {
+    display: 'flex',
+    flexDirection: 'row'
   }
 });
