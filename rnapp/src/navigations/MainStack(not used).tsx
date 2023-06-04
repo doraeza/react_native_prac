@@ -3,7 +3,7 @@
 import React, { useContext } from 'react';
 // import { ThemeContext } from 'styled-components/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import FriendsScreen from '../screens/FriendsScreen';
+import FriendsScreen from '../screens/CartScreen';
 import Main from '../screens/Main';
 import List from '../screens/list';
 import useUserInfo from '../hooks/useUserInfo';
