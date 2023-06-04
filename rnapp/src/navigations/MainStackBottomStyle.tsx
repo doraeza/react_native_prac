@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 // import { ThemeContext } from 'styled-components/native';
 // import { createStackNavigator } from '@react-navigation/stack';
-import Cart from '../screens/FriendsScreen';
+import Cart from '../screens/CartScreen';
 import Main from '../screens/Main';
 import List from '../screens/list';
 import useUserInfo from '../hooks/useUserInfo';
