@@ -26,7 +26,7 @@ const ProductDetail = () => {
                 <View style={{ height: 10 }} />
                 <Text>Price:$ {product.price}</Text>
                 <View style={{ height: 10 }} />
-                <AddToCart />
+                <AddToCart productData={product}/>
                 
                 <CustomButton
                         text='바로 구매'

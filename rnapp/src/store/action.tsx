@@ -11,8 +11,9 @@ export const decrement = () => ({
   type: DECREMENT,
 });
 
-export const addCart = () => ({
+export const addCart = ({payload}:{payload:{itemIdx:number, itemName: string, itemQuantity: number}}) => ({
   type: ADDCART,
+  payload: payload
 })
 
 export const updateCart = () => ({
