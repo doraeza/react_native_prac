@@ -1,4 +1,4 @@
 export interface AppState {
     count: number;
-    onCart : {itemName: string, itemQuantity: number}[]
+    onCart : {itemIdx:number, itemName: string, itemQuantity: number}[]
   }
