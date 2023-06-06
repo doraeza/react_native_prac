@@ -20,8 +20,8 @@ const CartScreen =()=> {
             })=>
         {
           <View>
-          <Text>name : {el['itemName']}</Text>
-          <Text>ea : {el['itemQuantity']}</Text>
+            <Text>name : {el.itemName}</Text>
+            <Text>ea : {el.itemQuantity}</Text>
           </View>
         })}
       </View>
@@ -31,6 +31,7 @@ const CartScreen =()=> {
   
     return (
       <View style={ScreenStyles.container}>
+        <Text>List</Text>
         {renderCartList(onCart)}
       </View>
     );
