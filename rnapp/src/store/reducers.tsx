@@ -2,7 +2,7 @@ import {AppState} from './../interface/AppState'
   
   const initialState = {
     count: 0,
-    onCart : [{itemIdx:0, itemName: "", itemQuantity: 0}]
+    onCart : []
   };
   
   // 리듀서 정의

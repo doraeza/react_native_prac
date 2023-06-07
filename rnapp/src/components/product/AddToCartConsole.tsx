@@ -12,7 +12,7 @@ const AddToCart = ({ productData }:
   const [count, setCount] = useState(1);
   const add = useSelector((state: AppState) => state.onCart);
   const dispatch = useDispatch();
-  const payload = { itemIdx: productData.id, itemName: productData.title, itemQuantity: 1 }
+  const payload = { itemIdx: productData.id, itemName: productData.title, itemQuantity: count }
   const incrementCount = () => {
     setCount(count + 1);
   };
@@ -34,7 +34,10 @@ const AddToCart = ({ productData }:
       </View>
       <CustomButton
               text='장바구니 담기'
-              pressFuction={()=>{handleAddCart()}}
+              pressFuction={()=>{
+                handleAddCart()
+                setCount(1);
+              }}
       />
     </View>
   );
