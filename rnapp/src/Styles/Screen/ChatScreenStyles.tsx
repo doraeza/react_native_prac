@@ -67,5 +67,21 @@ export const ScreenStyles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  cartcard: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginBottom: 10,
+    alignItems: 'center',
+  },
+  cardelement: {
+    backgroundColor: 'blue',
+    padding: 10,
+    borderRadius: 5,
+  },
+  cardtext: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
   }
 });
