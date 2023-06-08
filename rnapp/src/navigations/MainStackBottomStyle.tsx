@@ -34,7 +34,7 @@ const [isLogin, setIsLogin] = React.useState(false)
   return (
     
     <BottomTab.Navigator
-    //   initialRouteName="Main"
+      initialRouteName="Main"
     screenOptions={({ route }) => ({
       tabBarVisible: route.name === 'Main' ,
       headerTitleAlign: 'center',
