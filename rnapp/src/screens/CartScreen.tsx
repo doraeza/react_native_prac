@@ -14,6 +14,9 @@ const CartScreen =()=> {
       <View style={ScreenStyles.cardelement}>
         <Text style={ScreenStyles.cardtext}>{item.itemName}</Text>
         <Text style={ScreenStyles.cardtextquantity}>{item.itemQuantity}</Text>
+        <TouchableOpacity style={ScreenStyles.button} onPress={()=>{}}>
+            <Text style={ScreenStyles.buttonText}>제거</Text>
+        </TouchableOpacity>
       </View>
     </View>
   ));
@@ -21,8 +24,15 @@ const CartScreen =()=> {
   
     return (
       <View style={ScreenStyles.container}>
-        <Text>List</Text>
         {renderItems}
+        <View style={ScreenStyles.plusminus} >
+          <TouchableOpacity style={ScreenStyles.button} onPress={()=>{}}>
+              <Text style={ScreenStyles.buttonText}>구매하기</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={ScreenStyles.button} onPress={()=>{}}>
+              <Text style={ScreenStyles.buttonText}>취소</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     );
 }
