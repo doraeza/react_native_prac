@@ -13,7 +13,7 @@ const CartScreen =()=> {
     <View style={ScreenStyles.cartcard} key={item.itemIdx}>
       <View style={ScreenStyles.cardelement}>
         <Text style={ScreenStyles.cardtext}>{item.itemName}</Text>
-        <Text style={ScreenStyles.cardtext}>{item.itemQuantity}</Text>
+        <Text style={ScreenStyles.cardtextquantity}>{item.itemQuantity}</Text>
       </View>
     </View>
   ));

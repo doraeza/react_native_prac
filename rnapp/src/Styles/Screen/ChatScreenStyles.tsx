@@ -75,12 +75,19 @@ export const ScreenStyles = StyleSheet.create({
     alignItems: 'center',
   },
   cardelement: {
-    backgroundColor: 'blue',
+    display: 'flex',
+    flexDirection: 'row',
+    backgroundColor: 'grey',
     padding: 10,
     borderRadius: 5,
   },
   cardtext: {
     color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  cardtextquantity: {
+    color: 'blue',
     fontSize: 16,
     fontWeight: 'bold',
   }
