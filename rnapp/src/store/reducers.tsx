@@ -39,6 +39,13 @@ import {AppState} from './../interface/AppState'
           onCart: [...state.onCart, newPerson]
         };
       }
+      case "DELETECART":
+        const itemIdxToRemove:any = action.payload;
+        const updatedCart = state.onCart.filter(item => item.itemIdx !== itemIdxToRemove.itemIdx);
+        return {
+          ...state,
+          onCart: updatedCart
+      };
       case "UPDATECART":
         const { newTitle, newQuantity } = action.payload;
         return {
