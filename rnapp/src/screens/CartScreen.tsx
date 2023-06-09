@@ -2,21 +2,34 @@ import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import Test from '../components/common/TestModule'
 import {ScreenStyles} from '../Styles/Screen/ChatScreenStyles'
-import { useSelector } from 'react-redux'
 import { AppState } from '../interface/AppState'
 import { TouchableOpacity } from 'react-native-gesture-handler'
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteCart } from '../store/action'
+import CustomButton from '../components/common/CustomButton'
 
 const CartScreen =()=> {
   const onCart = useSelector((state: AppState) => state.onCart);
+  const dispatch = useDispatch();
+
+  const handleDeleteCart = (payload:number) => {
+    dispatch(deleteCart({payload: {
+      itemIdx: payload
+  }}));
+  };
+
 
   const renderItems = onCart.map(item => (
     <View style={ScreenStyles.cartcard} key={item.itemIdx}>
       <View style={ScreenStyles.cardelement}>
         <Text style={ScreenStyles.cardtext}>{item.itemName}</Text>
         <Text style={ScreenStyles.cardtextquantity}>{item.itemQuantity}</Text>
-        <TouchableOpacity style={ScreenStyles.button} onPress={()=>{}}>
-            <Text style={ScreenStyles.buttonText}>제거</Text>
-        </TouchableOpacity>
+        <CustomButton
+              text='제거'
+              pressFuction={()=>{
+                handleDeleteCart(item.itemIdx)
+              }}
+        />
       </View>
     </View>
   ));
