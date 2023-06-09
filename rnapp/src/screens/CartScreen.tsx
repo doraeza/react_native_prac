@@ -27,6 +27,8 @@ const CartScreen =()=> {
         <CustomButton
               text='제거'
               pressFuction={()=>{
+                console.log("현재 oncart",onCart)
+                console.log('보내는 상품idx',item.itemIdx)
                 handleDeleteCart(item.itemIdx)
               }}
         />
