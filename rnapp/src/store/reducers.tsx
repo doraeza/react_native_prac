@@ -41,11 +41,14 @@ import {AppState} from './../interface/AppState'
       }
       case "DELETECART":
         const itemIdxToRemove:any = action.payload;
-        const updatedCart = state.onCart.filter(item => item.itemIdx !== itemIdxToRemove.itemIdx);
-        return {
-          ...state,
-          onCart: updatedCart
-      };
+        // let updatedCart = state.onCart.filter(item => item.itemIdx !== itemIdxToRemove.itemIdx);
+        const updatedCart = state.onCart.findIndex(item => item.itemIdx !== itemIdxToRemove.itemIdx);
+        if (updatedCart !== -1) {
+          return {
+            ...state,
+            onCart: [...state.onCart.filter(item => item.itemIdx !== itemIdxToRemove.itemIdx)]
+        }
+      }
       case "UPDATECART":
         const { newTitle, newQuantity } = action.payload;
         return {
