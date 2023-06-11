@@ -7,6 +7,8 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteCart } from '../store/action'
 import CustomButton from '../components/common/CustomButton'
+import { connect } from 'react-redux';
+
 
 const CartScreen =()=> {
   const onCart = useSelector((state: AppState) => state.onCart);

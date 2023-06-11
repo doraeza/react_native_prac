@@ -6,7 +6,7 @@ import {AppState} from './../interface/AppState'
   };
   
   // 리듀서 정의
-  const appReducer = (state: AppState = initialState, action:any): AppState => {
+  const appReducer = (state: any = initialState, action:any): AppState => {
     
     switch (action.type) {
       case "INCREMENT":
@@ -20,8 +20,8 @@ import {AppState} from './../interface/AppState'
           count: state.count - 1,
         };
       case "ADDCART":
-      const newPerson:any = action.payload;
-      const existingPersonIndex = state.onCart.findIndex(item => item.itemIdx === newPerson.itemIdx);
+      const newPerson:{itemIdx:number, itemName: string, itemQuantity: number} = action.payload;
+      const existingPersonIndex = state.onCart.findIndex((item:{itemIdx:number, itemName: string, itemQuantity: number}) => item.itemIdx === newPerson.itemIdx);
       if (existingPersonIndex !== -1) {
         // 중복 키 값이 발견된 경우, 기존 객체 대체
         return {
@@ -40,26 +40,24 @@ import {AppState} from './../interface/AppState'
         };
       }
       case "DELETECART":
-        const itemIdxToRemove:any = action.payload;
-        // let updatedCart = state.onCart.filter(item => item.itemIdx !== itemIdxToRemove.itemIdx);
-        const updatedCart = state.onCart.findIndex(item => item.itemIdx !== itemIdxToRemove.itemIdx);
-        if (updatedCart !== -1) {
-          return {
-            ...state,
-            onCart: [...state.onCart.filter(item => item.itemIdx !== itemIdxToRemove.itemIdx)]
-        }
-      }
-      case "UPDATECART":
-        const { newTitle, newQuantity } = action.payload;
+        const itemIdxToRemove:{itemIdx:number} = action.payload;
+        // let updatedCart = state.onCart.filter((item:{itemIdx:number, itemName: string, itemQuantity: number}) => item.itemIdx !== itemIdxToRemove.itemIdx);
+        // const updatedCart = state.onCart.findIndex(item => item.itemIdx !== itemIdxToRemove.itemIdx);
         return {
           ...state,
-          onCart: state.onCart.map(item => {
-            if (item.itemName === "") {
-              return { ...item, itemQuantity: newQuantity };
-            }
-            return item;
-          })
-        }
+          items: state.onCart.filter((item:{itemIdx:number, itemName: string, itemQuantity: number}) => item.itemIdx !== itemIdxToRemove.itemIdx)
+        };
+      // case "UPDATECART":
+      //   const { newTitle, newQuantity } = action.payload;
+      //   return {
+      //     ...state,
+      //     onCart: state.onCart.map(item => {
+      //       if (item.itemName === "") {
+      //         return { ...item, itemQuantity: newQuantity };
+      //       }
+      //       return item;
+      //     })
+      //   }
       default:
         return state;
     }
