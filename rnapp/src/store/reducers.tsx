@@ -43,8 +43,8 @@ import {AppState} from './../interface/AppState'
         const itemIdxToRemove:{itemIdx:number} = action.payload;
         return {
           ...state,
-          items: state.onCart.filter((item:{itemIdx:number, itemName: string, itemQuantity: number}) => item.itemIdx !== itemIdxToRemove.itemIdx)
-        };
+          cart: state.onCart.filter((item:any) => item.itemIdx !== itemIdxToRemove.itemIdx),
+        };	
       // case "UPDATECART":
       //   const { newTitle, newQuantity } = action.payload;
       //   return {
