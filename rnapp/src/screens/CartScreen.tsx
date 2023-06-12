@@ -9,14 +9,12 @@ import CustomButton from '../components/common/CustomButton'
 
 const CartScreen =()=> {
   const onCart = useSelector((state: AppState) => state.onCart);
-  console.log(onCart)
+  console.log('onCart=', onCart)
   const dispatch = useDispatch();
 
   const handleDeleteCart = (payload:number) => {
     console.log("handleDeleteCart payload=>", payload)
-    dispatch(deleteCart({payload: {
-      itemIdx: payload
-  }}));
+    dispatch(deleteCart( {payload: {itemIdx: payload} } ));
   };
 
 
