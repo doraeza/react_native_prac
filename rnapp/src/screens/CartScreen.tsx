@@ -1,20 +1,19 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import Test from '../components/common/TestModule'
+import { Text, View } from 'react-native'
 import {ScreenStyles} from '../Styles/Screen/ChatScreenStyles'
 import { AppState } from '../interface/AppState'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteCart } from '../store/action'
 import CustomButton from '../components/common/CustomButton'
-import { connect } from 'react-redux';
-
 
 const CartScreen =()=> {
   const onCart = useSelector((state: AppState) => state.onCart);
+  console.log(onCart)
   const dispatch = useDispatch();
 
   const handleDeleteCart = (payload:number) => {
+    console.log("handleDeleteCart payload=>", payload)
     dispatch(deleteCart({payload: {
       itemIdx: payload
   }}));

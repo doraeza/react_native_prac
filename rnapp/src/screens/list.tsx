@@ -23,8 +23,7 @@ const List = ({ productData }:
           />
         );
     }
-    const _onPress = (item:{name: string}) => {
-    }
+
 
     return (
         <View style={ScreenStyles.container}>

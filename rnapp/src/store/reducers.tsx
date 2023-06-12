@@ -41,8 +41,6 @@ import {AppState} from './../interface/AppState'
       }
       case "DELETECART":
         const itemIdxToRemove:{itemIdx:number} = action.payload;
-        // let updatedCart = state.onCart.filter((item:{itemIdx:number, itemName: string, itemQuantity: number}) => item.itemIdx !== itemIdxToRemove.itemIdx);
-        // const updatedCart = state.onCart.findIndex(item => item.itemIdx !== itemIdxToRemove.itemIdx);
         return {
           ...state,
           items: state.onCart.filter((item:{itemIdx:number, itemName: string, itemQuantity: number}) => item.itemIdx !== itemIdxToRemove.itemIdx)
