@@ -10,7 +10,6 @@ import { ProductData } from '../../interface/ProductData';
 const AddToCart = ({ productData }:
   { productData:ProductData }) => {
   const [count, setCount] = useState(1);
-  const add = useSelector((state: AppState) => state.onCart);
   const dispatch = useDispatch();
   const payload = { itemIdx: productData.id, itemName: productData.title, itemQuantity: count }
   const incrementCount = () => {
