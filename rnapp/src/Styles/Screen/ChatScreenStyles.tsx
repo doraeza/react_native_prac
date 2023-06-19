@@ -51,10 +51,17 @@ export const ScreenStyles = StyleSheet.create({
     paddingHorizontal: 8,
   },
   productContainer: {
-    flex: 1,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: 'white',
     paddingHorizontal: 16,
-    paddingTop: 32,
+    paddingTop: 8,
+    paddingBottom: 8,
+    marginTop: 8,
+    marginBottom: 8,
+    borderRadius: 8,
+    borderLeftWidth: 1,
+    borderRightWidth: 1,
+    borderTopWidth: 1,
+    borderBottomWidth: 1
   },
   description: {
     flexWrap: 'wrap',

@@ -31,6 +31,7 @@ const List = ({ productData }:
                 data={productData}
                 renderItem={renderProductItem}
                 contentContainerStyle={ScreenStyles.productList}
+                keyExtractor={(item:any) => item.id}
             />
         </View>
     )

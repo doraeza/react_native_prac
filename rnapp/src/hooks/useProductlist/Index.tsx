@@ -11,7 +11,7 @@ import {ProductData} from "../../interface/ProductData"
         "products", 
         //2. 익명함수로 fetch를 실행. <-- 비동기 요청부분
       () =>
-        fetch("https://fakestoreapi.com/products?limit=15")
+        fetch("https://fakestoreapi.com/products?limit=20")
         //3. <-- 비동기 요청이 성공했을 경우에 그 뒤에 가공을 하는 부분
         .then(res => res.json()),
         //옵션. useQuery를 사용할때 옵션값으로 요청을 넣을수있음
